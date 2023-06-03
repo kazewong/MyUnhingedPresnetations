@@ -16,9 +16,10 @@
 	<body>
 		<div class="reveal">
 			<div class="slides">
-				<section>Slide 1</section>
-				<section data-markdown="architecture.md"></section>
-				<section data-markdown="applications.md"></section>
+				<!-- <section data-markdown="title.md"></section> -->
+				<section data-external="title.html"></section>
+				<section data-external="architecture.html"></section>
+				<section data-external="applications.html"></section>
 			</div>
 		</div>
 
@@ -30,11 +31,21 @@
 			// More info about initialization & config:
 			// - https://revealjs.com/initialization/
 			// - https://revealjs.com/config/
+			src: 'plugin/external/external.js', 
+
 			Reveal.initialize({
 				hash: true,
 
 				// Learn about plugins: https://revealjs.com/plugins/
-				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ],
+				dependencies:[
+					{
+						src: '../../plugin/external/external.js',
+						condition: function() {
+							return !!document.querySelector( '[data-external],[data-external-replace]' );
+						}
+					},
+				] 
 			});
 		</script>
 	</body>
