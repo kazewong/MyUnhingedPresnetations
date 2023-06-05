@@ -7,92 +7,79 @@
 
 <section>
     <h2>Tokenization</h2>
-    <span class="fragment fade-up" data-id="word"> I am </span>
+    <span class="fragment fade-up" data-id="word"> I am a</span>
     <br>
-    <span class="fragment fade-up" data-id="token">{0, 1}</span>    
+    <span class="fragment fade-up" data-id="token">{0, 1, 2}</span>    
 </section>
 
 <!-- Generate a slide that talks about attention mechanism, show an equation of it. -->
 <section>
     <h2>Word Embedding</h2>
-    <style>
-        .column {
-            display: flex;
-            flex-direction: column;
-        }
-        .row {
-            display: flex;
-            flex-direction: row;
-        }
-        .square {
-        width: 40px;
-        height: 40px;
-        border: 5px solid grey;
-        background-color: transparent;
-        margin-top: -5px;
-        display: inline-block;
-        box-sizing: border-box;
-        }
 
-        .square.blue{
-            border: 5px solid #1b91ff;
-        }
-
-        .square.red{
-            border: 5px solid #ff2c2d;
-        }
-
-    </style>
-    <span data-id="word"> I am </span>
+    <span data-id="word"> I am a</span>
     <br>
-    <span data-id="token">{<span class="fragment highlight-blue" data-fragment-index="1">0</span>, <span class="fragment highlight-red" data-fragment-index="1">1</span>}</span>    
-    <div class="row fragment fade-up " data-fragment-index="2" style="position: relative; left: 45%; padding-top: 10px;">
+    <span data-id="token">{<span class="fragment highlight-blue" data-fragment-index="1">0</span>, <span class="fragment highlight-red" data-fragment-index="1">1</span>, <span class="fragment highlight-green" data-fragment-index="1">2</span>}</span>    
+    <div class="row fragment fade-up " data-fragment-index="2" style="position: relative; left: 43%; padding-top: 13px;">
         <div class="column" style="padding-right: 10px;">
             <div class="square blue"></div>
             <div class="square blue"></div>
             <div class="square blue"></div>
-            <div class="square blue"></div>
+        </div>
+        <div class="column" style="padding-right: 10px;">
+            <div class="square red "></div>
+            <div class="square red "></div>
+            <div class="square red "></div>
         </div>
         <div class="column">
-            <div class="square red "></div>
-            <div class="square red "></div>
-            <div class="square red "></div>
-            <div class="square red "></div>
+            <div class="square green "></div>
+            <div class="square green "></div>
+            <div class="square green "></div>
         </div>
     </div>
 </section>
 
 <section>
-    <style>
-    .column {
-        display: flex;
-        flex-direction: column;
-    }
-    .square {
-    width: 40px;
-    height: 40px;
-    border: 5px solid grey;
-    background-color: transparent;
-    margin-top: -5px;
-    display: inline-block;
-    box-sizing: border-box;
-    }
-    </style>
-    <h2>Positional Encoding</h2>
 
-    <span>I am a machine learning boy</span>
-    <!-- Show five vertical columns of squares -->
-    <br>
-    <span> 1    2    3 4 5 6 </span>
-    <div class="column" style="position: relative; left: 20%; top: 30px;">
-        <div class="square"></div>
-        <div class="square"></div>
-        <div class="square"></div>
-        <div class="square"></div>
+    <h2>Positional Encoding</h2>
+    <span data-id="word"> I am a</span>
+    <div class="row" style="position: relative; left: 43%; padding-top: 13px;">
+        <div class="column" style="padding-right: 10px;">
+            <div class="square blue"></div>
+            <div class="square blue"></div>
+            <div class="square blue"></div>
+        </div>
+        <div class="column" style="padding-right: 10px;">
+            <div class="square red "></div>
+            <div class="square red "></div>
+            <div class="square red "></div>
+        </div>
+        <div class="column">
+            <div class="square green "></div>
+            <div class="square green "></div>
+            <div class="square green "></div>
+        </div>
+    </div>
+    <div class="fragment fade-up" data-fragment-index="1" >
+        <span style="margin-right: 20px;">0</span> <span style="margin-right: 20px;">1</span> <span>2</span>
+    </div>
+    <div class="row fragment fade-up" data-fragment-index="2" style="position: relative; left: 43%; padding-top: 13px;">
+        <div class="column" style="padding-right: 10px;">
+            <div class="square blue dashed"></div>
+            <div class="square blue dashed"></div>
+            <div class="square blue dashed"></div>
+        </div>
+        <div class="column" style="padding-right: 10px;">
+            <div class="square red dashed"></div>
+            <div class="square red dashed"></div>
+            <div class="square red dashed"></div>
+        </div>
+        <div class="column">
+            <div class="square green dashed"></div>
+            <div class="square green dashed"></div>
+            <div class="square green dashed"></div>
+        </div>
     </div>
     
-
-
 </section>
 
 <section>
@@ -106,3 +93,40 @@
 <section>
     <h2>Multi-modality</h2>
 </section>
+
+<style>
+    .column {
+        display: flex;
+        flex-direction: column;
+    }
+    .row {
+        display: flex;
+        flex-direction: row;
+    }
+    .square {
+    width: 40px;
+    height: 40px;
+    border: 5px solid grey;
+    background-color: transparent;
+    margin-top: -5px;
+    display: inline-block;
+    box-sizing: border-box;
+    }
+
+    .square.blue{
+        border: 5px solid #1b91ff;
+    }
+
+    .square.red{
+        border: 5px solid #ff2c2d;
+    }
+
+    .square.green{
+        border: 5px solid #17ff2e;
+    }
+
+    .square.dashed{
+        border-style: dashed;
+    }
+
+</style>
