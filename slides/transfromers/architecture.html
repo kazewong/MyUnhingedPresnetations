@@ -5,7 +5,7 @@
 
 <!-- Generate slide that talks about tokenization and embedding process -->
 
-<section>
+<section data-vertical-align-top>
     <h2>Tokenization</h2>
     <span class="fragment fade-up" data-id="word"> I am a</span>
     <br>
@@ -13,7 +13,7 @@
 </section>
 
 <!-- Generate a slide that talks about attention mechanism, show an equation of it. -->
-<section>
+<section data-vertical-align-top>
     <h2>Word Embedding</h2>
 
     <span data-id="word"> I am a</span>
@@ -38,7 +38,7 @@
     </div>
 </section>
 
-<section>
+<section data-vertical-align-top>
 
     <h2>Positional Encoding</h2>
     <span data-id="word"> I am a</span>
@@ -82,15 +82,76 @@
     
 </section>
 
-<section>
+<section data-vertical-align-top>
     <h2>Attention</h2>
+    <div class="row" style="position: relative; left: 30%; padding-top: 40px;">
+        <div class="fragment fade-right"  data-fragment-index="0">
+            <div class="fragment fade-out" data-fragment-index="1">
+                <div class="column" style="padding-right: 50px;" >
+                    <div class="row">
+                        <span style="margin-top: -15px;margin-left: -5px;margin-right: 34px;"> I &nbsp; </span>
+                        <div class="square"></div>
+                    </div>
+                    <div class="row">
+                        <span style="margin-top: -15px;margin-left: -21px;margin-right: 34px;"> am </span>
+                        <div class="square"></div>
+                    </div>
+                    <div class="row">
+                        <span style="margin-top: -15px;margin-left: -8px;margin-right: 48px;"> a </span>
+                        <div class="square"></div>
+                    </div>
+                </div>
+            </div>     
+        </div>
+        <div class="column">
+            <div class="fragment fade-in" data-fragment-index="1">
+                <div class="row">
+                    <span style="margin-top: -15px;margin-left: -5px;margin-right: 34px;"> I &nbsp; </span>
+                    <div class="square"></div>
+                    <div class="square"></div>
+                    <div class="square"></div>
+                </div>
+                <div class="row">
+                    <span style="margin-top: -15px;margin-left: -21px;margin-right: 34px;"> am </span>
+                    <div class="square"></div>
+                    <div class="square"></div>
+                    <div class="square"></div>
+                </div>
+                <div class="row">
+                    <span style="margin-top: -15px;margin-left: -8px; margin-right: 49px;"> a </span>
+                    <div class="square"></div>
+                    <div class="square"></div>
+                    <div class="square"></div>
+                </div>
+                <div class="row">
+                    <div style="margin-left: 63px;">I</div>
+                    <div style="margin-left: 10px;">am</div>
+                    <div style="margin-left: 10px;">a</div>
+                </div>
+            </div>
+            <div class="fragment fade-up" data-fragment-index="0">
+                <div class="fragment fade-out" data-fragment-index="1">
+                    <div class="row" style="margin-top: 40px;margin-left: 60px;">
+                        <div class="square"></div>
+                        <div class="square"></div>
+                        <div class="square"></div>
+                    </div>
+                    <div class="row">
+                        <div style="margin-left: 63px;">I</div>
+                        <div style="margin-left: 10px;">am</div>
+                        <div style="margin-left: 10px;">a</div>
+                    </div>
+                </div>
+            </div>
+          </div> 
+    </div>
 </section>
 
-<section>
+<section data-vertical-align-top>
     <h2>Beyond NLP</h2>
 </section>
 
-<section>
+<section data-vertical-align-top>
     <h2>Multi-modality</h2>
 </section>
 
@@ -109,6 +170,7 @@
     border: 5px solid grey;
     background-color: transparent;
     margin-top: -5px;
+    margin-left: -5px;
     display: inline-block;
     box-sizing: border-box;
     }
