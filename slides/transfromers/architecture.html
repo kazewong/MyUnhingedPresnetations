@@ -84,15 +84,17 @@
 
 <section data-vertical-align-top>
     <h2>Attention</h2>
-    <div class="row" style="position: relative; left: 30%; padding-top: 40px;">
-        <div class="fragment fade-right"  data-fragment-index="0">
-            <div class="fragment fade-out" data-fragment-index="1">
+    <div class="row" style="position: relative; left: 25%; padding-top: 40px;">
+        <!-- Query vector -->
+        <div class="fragment fade-right"  data-fragment-index="0" style="margin-top: 80px;">
+            <div class="fragment fade-out" data-fragment-index="3">
                 <div class="column" style="padding-right: 50px;" >
                     <div class="row">
                         <span style="margin-top: -15px;margin-left: -5px;margin-right: 34px;"> I &nbsp; </span>
                         <div class="square"></div>
                     </div>
                     <div class="row">
+                        <span class="fragment fade-right" data-fragment-index="1" style="margin-top: -15px;margin-left: -144px;margin-right: 59px;"> Query </span>
                         <span style="margin-top: -15px;margin-left: -21px;margin-right: 34px;"> am </span>
                         <div class="square"></div>
                     </div>
@@ -103,8 +105,10 @@
                 </div>
             </div>     
         </div>
+        <!-- Score matrix -->
         <div class="column">
-            <div class="fragment fade-in" data-fragment-index="1">
+            <div class="fragment fade-in" data-fragment-index="3">
+                <div class="row" style="padding-bottom: 30px;"> Score matrix</div>
                 <div class="row">
                     <span style="margin-top: -15px;margin-left: -5px;margin-right: 34px;"> I &nbsp; </span>
                     <div class="square"></div>
@@ -129,8 +133,9 @@
                     <div style="margin-left: 10px;">a</div>
                 </div>
             </div>
+            <!-- key vector -->
             <div class="fragment fade-up" data-fragment-index="0">
-                <div class="fragment fade-out" data-fragment-index="1">
+                <div class="fragment fade-out" data-fragment-index="3">
                     <div class="row" style="margin-top: 40px;margin-left: 60px;">
                         <div class="square"></div>
                         <div class="square"></div>
@@ -141,9 +146,21 @@
                         <div style="margin-left: 10px;">am</div>
                         <div style="margin-left: 10px;">a</div>
                     </div>
+                    <div class="row fragment fade-up" style="padding-top: 10px;margin-left: 80px;" data-fragment-index="2"> Key </div>                
                 </div>
             </div>
-          </div> 
+        </div>
+        <!-- Value vector  -->
+        <div class="fragment fade-up" style=" margin-top: 80px; margin-left: 30px; " data-fragment-index="4">
+            <div class="column" style="margin-left: 60px;">
+                <div class="square"></div>
+                <div class="square"></div>
+                <div class="square"></div>
+            </div>
+            <div style="padding-top: 10px;margin-left: 33px;">Value</div>
+        </div>
+        <!-- Latent vector -->
+        
     </div>
 </section>
 
