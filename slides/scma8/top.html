@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>Hot topic: Transformer</title>
+
+		<link rel="stylesheet" href="../../dist/reset.css">
+		<link rel="stylesheet" href="../../dist/reveal.css">
+		<link rel="stylesheet" href="../../dist/theme/moon_mod.css">
+
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="../../plugin/highlight/monokai.css">
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<!-- <section data-markdown="title.md"></section> -->
+				<section data-external="title.html"></section>
+				<section data-external="architecture.html"></section>
+				<section data-external="applications.html"></section>
+			</div>
+		</div>
+
+
+		<script src="../../dist/reveal.js"></script>
+		<script src="../../plugin/external/external.js"></script>
+		<script src="../../plugin/notes/notes.js"></script>
+		<script src="../../plugin/markdown/markdown.js"></script>
+		<script src="../../plugin/highlight/highlight.js"></script>
+		<script src="../../plugin/animate/plugin.js"></script>
+		<script src="../../plugin/animate/svg.min.js"></script>
+		<script src="../../plugin/embed-tweet/plugin.js"></script>
+
+
+
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+			Reveal.initialize({
+				hash: true,
+
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes, RevealAnimate, RevealEmbedTweet ],
+				dependencies:[
+					{
+						src: '../../plugin/external/external.js',
+						condition: function() {
+							return !!document.querySelector( '[data-external],[data-external-replace]' );
+						}
+					},
+				] 
+			});
+		</script>
+	</body>
+</html>
