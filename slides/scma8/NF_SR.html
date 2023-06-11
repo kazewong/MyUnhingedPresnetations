@@ -7,21 +7,29 @@
 </section>
 
 <section data-auto-animate>
-    \[\begin{aligned}
-    p(\theta | d) &amp; = \frac{p(d | \theta) \pi(\theta)}{p(d)}
-    \end{aligned} \]
+    <h3>Building a hierarchical model</h3>
+    <div class="r-stack">
+        <div class="fragment fade-in-then-out">
+            \[\begin{aligned}
+            p(\theta | d) &amp; = \frac{p(d | \theta) \pi(\theta)}{p(d)}
+            \end{aligned} \]    
+        </div>
+    
+        <div class="fragment fade-in">
+            <!-- Write down a hierarchical model -->
+            \[\begin{aligned}
+            p(\lambda | d) &amp; = \frac{p(d | \theta) p(\theta | \lambda) \pi(\lambda)}{p(d)}
+            \end{aligned} \]
+        </div>
+    </div>
 </section>
-
-<section data-auto-animate>
-    <!-- Write down a hierarchical model -->
-    \[\begin{aligned}
-    p(\lambda | d) &amp; = \frac{p(d | \theta) p(\theta | \lambda) \pi(\lambda)}{p(d)}
-    \end{aligned} \]
-</section>
-
 
 <section>
-    Unique characteristics of GW
+    <h3 class="header">Unique characteristics of GW</h3>
+    <ol>
+        <li> Very clean selection effect</li>
+        <li> Huge uncertainty from individual events</li>
+    </ol>
 </section>
 
 <section>
@@ -55,3 +63,30 @@
     <img class="row" data-src="./images/Miles_ICML.png">
 </section>
 
+<style>
+    .column {
+        display: flex;
+        flex-direction: column;
+    }
+    .row {
+        display: flex;
+        flex-direction: row;
+    }
+
+    p{
+        color: white;
+    }
+
+    .dim{
+        color: grey;
+    }
+
+    .bright{
+        color: white;
+    }
+
+    .header{
+        text-align: left; 
+        margin-left: 20px;
+    }
+</style>
