@@ -3,9 +3,17 @@
 </section>
 
 <section>
-Defining problem
-    <img class="row" data-src="./images/TimeSeries.png">
-    <img class="row" data-src="./images/m1m2PE.png">
+    <h3 style="text-align: left; margin-left: 20px;"> Inferring source properties </h3>
+        <div class="row">
+            <div class="fragment" style="padding-right: 20px">
+                <p style="padding:0%; margin:0%;"> Data </p>
+                <img data-src="./images/TimeSeries.png" height="360px">
+            </div>
+            <div class="fragment" style="padding-right: 20px">
+                <p style="padding:0%; margin:0%;"> Source properties </p>
+                <img data-src="./images/m1m2PE.png" height="360px">
+            </div>
+        </div>
 </section>
 
 <section>
@@ -19,10 +27,20 @@ Defining problem
 </section>
 
 <section>
-Talk about Jax
-    <img class="row" data-src="./images/Jax.png">
-    <img class="row" data-src="./images/jax_grad.png">
-    <img class="row" data-src="./images/jax_compile.png">     
+    <div class="column">
+        <div class="row">
+            <img class="row" data-src="./images/Jax.png">
+            <ol class="bright">
+                <li>Coffee</li>
+                <li>Tea</li>
+                <li>Milk</li>
+            </ol>
+        </div>
+        <div class="row">
+            <img class="row" data-src="./images/jax_grad.png" width="360px;" style="padding-right: 20px;">
+            <img class="row" data-src="./images/jax_compile.png"  width="360px;">
+        </div>
+    </div>
 </section>
 
 <section>
@@ -52,11 +70,45 @@ Talk about Jax
 </section>
 
 <section>
-    Jim's result
-    <img class="row" data-src="./images/jim_posterior.png">
-    <img class="row" data-src="./images/jim_pp_plot.png">
+    <h3 style="text-align: left; margin-left: 20px;"> Result</h3>
+    <div class="column">
+        <div class="row">
+            <div class="fragment">
+                <p> Real data </p>
+                <img class="row" data-src="./images/jim_posterior.png" height="480px;">
+            </div>
+            <div class="fragment">
+                <p> Simulated population</p>
+                <img class="row" data-src="./images/jim_pp_plot.png" height="480px;">
+            </div>
+        </div>
+    </div>
 </section>
 
 <section>
     Highlight we are not compromising
 </section>
+
+
+<style>
+    .column {
+        display: flex;
+        flex-direction: column;
+    }
+    .row {
+        display: flex;
+        flex-direction: row;
+    }
+
+    p{
+        color: white;
+    }
+
+    .dim{
+        color: grey;
+    }
+
+    .bright{
+        color: white;
+    }
+</style>
