@@ -31,12 +31,17 @@
 
 
 <section>
-    <h4 class="header"> Some issues about current analysis </h4>
+    <h4 class="header"> Some challenges for current analysis </h4>
     <div class="row">
         <img data-src="./images/GWTC3_phenomModels.png" height="480px;">
-        <ol>
-            <li> Hard to go to high dimension</li>
-        </ol>
+        <div class="column">
+            <ol style="margin:50px; padding-left:20px; margin-bottom: 0px;">
+                <li class="fragment"> Growingly difficult to build models </li>
+                <li class="fragment"> Hard to go to high dimension</li>
+                <li class="fragment"> Powered by smart people (short in supply) </li>
+            </ol>
+            <img class="fragment" data-src="./images/GWTC3spline.png" height="200px;" style="margin-left:20px; margin-top:42px;">
+        </div>
     </div>
 </section>
 
@@ -50,11 +55,16 @@
 
 <section>
     <h4 class="header">Using normalizing flow as the population model</h4>
-    <div class="column">
-       <img data-src="./images/David_money_plot.png">
-       <p style="color: rgb(224, 71, 71); font-size:24pt"> It works, but unstable with selection function?</p>
+    <div class="r-stack">
+        <div class="fragment fade-in-then-out">
+            <iframe width="720" height="500" src="https://www.youtube.com/embed/s27I7b3-FMY?start=30" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+        
+        <div class="column fragment fade-in">
+           <img data-src="./images/David_money_plot.png">
+           <p class="fragment" style="color: rgb(224, 71, 71); font-size:24pt"> It works, but unstable with selection function?</p>
+        </div>    
     </div>
-
 </section>
 
 <section>
