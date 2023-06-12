@@ -21,13 +21,29 @@
     <img class="row" data-src="./images/GoogleCPUh.png">
 </section>
 
-<section>
-    <h4 class="header"> Quick recap of MCMC</h4>
-</section>
 
 <section>
     <h4 class="header"> Why is GW hard?</h4>
+    <div class="row">
+        <div class="column">
+            <p style="padding:0%; margin:0%;">Multimodality</p>
+            <img data-src="https://gracedb.ligo.org/api/superevents/S230601bf/files/bayestar.png,1" height="360">
+            <p class="citation"> https://gracedb.ligo.org/superevents/S230601bf/view/</p>
+        </div>
+        <div>
+            <p style="padding:0%; margin:0%;"> Small posterior (sometime)</p>
+            <img data-src="https://inspirehep.net/files/a2f58413c30620f4131cbd059e02f1f2" height="360">
+            <p class="citation"> Phys.Rev.X 9 (2019) 1, 011001</p>
+        </div>
+    </div>
 </section>
+
+<section>
+    <h4 class="header"> Quick recap of MCMC</h4>
+    <iframe src="https://chi-feng.github.io/mcmc-demo/app.html" style="background: #FFFFFF;" title="MCMC-demo" width=1080 height=560></iframe>
+    <p class="citation">Credit: MCMC gallery</p>
+</section>
+
 
 <section>
     <h4 class="header">Jax - numpy on steroid</h4>
@@ -108,31 +124,3 @@
     Highlight we are not compromising
 </section>
 
-
-<style>
-    .column {
-        display: flex;
-        flex-direction: column;
-    }
-    .row {
-        display: flex;
-        flex-direction: row;
-    }
-
-    p{
-        color: white;
-    }
-
-    .dim{
-        color: grey;
-    }
-
-    .bright{
-        color: white;
-    }
-
-    .header{
-        text-align: left; 
-        margin-left: 20px;
-    }
-</style>

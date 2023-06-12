@@ -364,3 +364,41 @@ section.has-light-background, section.has-light-background h1, section.has-light
     background-color: var(--r-background-color);
   }
 }
+
+/*********************************************
+ * Custom
+ *********************************************/
+
+
+.column {
+    display: flex;
+    flex-direction: column;
+}
+.row {
+    display: flex;
+    flex-direction: row;
+}
+
+p{
+    color: rgb(200, 200, 200);
+}
+
+.dim{
+    color: grey;
+}
+
+.bright{
+    color: rgb(255, 255, 255);
+}
+
+.header{
+    text-align: left; 
+    margin-left: 20px;
+}
+
+.citation{
+    color: grey;
+    font-size: 12pt;
+    margin: 0px;
+    padding: 0%;
+}
