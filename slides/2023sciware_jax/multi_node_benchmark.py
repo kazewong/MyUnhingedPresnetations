@@ -5,7 +5,6 @@
 import os
 import time
 
-
 import jax
 import jax.numpy as jnp
 from jax import sharding
