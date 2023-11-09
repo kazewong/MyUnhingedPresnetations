@@ -22,12 +22,15 @@ initialize()
 global_mesh = Mesh(np.array(jax.devices()), ('b'))
 
 if jax.process_index() == 0:
-    os.system("echo SLURM_ID: $SLURM_JOB_ID")
-    os.system("echo SLURM_NTASKS: $SLURM_NTASKS")
-    os.system("echo SLURM_NODELIST: $SLURM_NODELIST")
-    os.system("echo SLURM_STEP_NODELIST: $SLURM_STEP_NODELIST")
-    os.system("echo SLURM_STEP_GPUS: $SLURM_STEP_GPUS")
-    os.system("echo SLURM_GPUS: $SLURM_GPUS")
+    for k in [
+        'SLURM_JOB_ID',
+        'SLURM_NTASKS',
+        'SLURM_NODELIST',
+        'SLURM_STEP_NODELIST',
+        'SLURM_STEP_GPUS',
+        'SLURM_GPUS',
+    ]:
+        print(f'{k}: {os.getenv(k,"")}')
     print(jax.process_count())
     print(jax.devices())
     print(jax.local_device_count())
