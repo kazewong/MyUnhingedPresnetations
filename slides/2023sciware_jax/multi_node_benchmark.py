@@ -50,4 +50,4 @@ print(arrays)
 def f(x):
     return jnp.sum(x*x)
 
-# print(multihost_utils.process_allgather(jax.value_and_grad(f)(arr)))
+print(multihost_utils.process_allgather(jax.value_and_grad(f)(arr)))
