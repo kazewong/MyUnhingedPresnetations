@@ -1,4 +1,4 @@
-# Welcome to Slides
+# Introduction to CPU vs GPU + communication
 
 
 ---
@@ -105,5 +105,19 @@ print("Bechmarking gpu_f(x)...")
 ```python
 
 ```
+
+---
+
+# Mention something about neural network and communication
+
+---
+
+# Shit talk about Jax
+
+---
+
+# Summary
+
+sell them Jax again
 
 ---
