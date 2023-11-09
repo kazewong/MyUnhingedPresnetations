@@ -9,15 +9,19 @@ print(jax.process_count())
 print(jax.devices())
 print(jax.local_device_count())
 
-x = jnp.zeros((4000,4000))
+@jax.jit
+def f(x,y):
+    return x@y + x
+
+x = jnp.zeros((8000,8000))
 
 print(x.device())
 
-ipython.run_line_magic("timeit", "jnp.matmul(x,x)")
+ipython.run_line_magic("timeit", "f(x,x)")
 
 sharding = PositionalSharding(mesh_utils.create_device_mesh((4,)))
 y = jax.device_put(x, sharding.reshape(4,1))
 
 print(y.devices())
 
-ipython.run_line_magic("timeit", "jnp.matmul(y,y)")
+ipython.run_line_magic("timeit", "f(y,y)")
