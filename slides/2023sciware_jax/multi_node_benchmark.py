@@ -30,26 +30,32 @@ if jax.process_index() == 0:
         'SLURM_GPUS',
     ]:
         print(f'{k}: {os.getenv(k,"")}')
-    print(jax.process_count())
-    print(jax.devices())
-    print(jax.local_device_count())
+    print("Total number of process: ", jax.process_count())
+    print("List of devices: ",jax.devices())
+    print("Number of device on this process: ",jax.local_device_count())
 
-loss_values = 0.
 
 local_shape = (8, 2)
 global_shape = (jax.process_count() * local_shape[0], ) + local_shape[1:]
 local_array = np.arange(math.prod(local_shape)).reshape(local_shape) + jax.process_index()*1.0
 arrays = jax.device_put(
     np.split(local_array, len(global_mesh.local_devices), axis = 0), global_mesh.local_devices)
+
 sharding = jax.sharding.NamedSharding(global_mesh, P(('b'), ))
 arr = jax.make_array_from_single_device_arrays(global_shape, sharding, arrays)
-print(jnp.sum(multihost_utils.process_allgather(arr))+loss_values)
-print(local_array.shape,  arr.shape)
-print(arrays)
+
+print(arrays[0].devices())
+print(arr.shape)
+
+
 
 
 @jax.jit
-def f(x):
-    return jnp.sum(x*x)
+def f(x, y):
+    return x@y + x
 
-print(multihost_utils.process_allgather(jax.value_and_grad(f)(arr)))
+# print(jnp.sum(multihost_utils.process_allgather(arr)))
+# print(local_array.shape,  arr.shape)
+# print(arrays)
+
+# print(multihost_utils.process_allgather(jax.value_and_grad(f)(arr)))
