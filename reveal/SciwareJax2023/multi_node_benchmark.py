@@ -65,4 +65,4 @@ f(arr, arr).block_until_ready()
 multi_gpu_time = time.time() - current_time
 
 if jax.process_index() == 0:
-    print("Time to compute on 4 devices:", multi_gpu_time)
+    print("Time to compute on 8 devices:", multi_gpu_time)
