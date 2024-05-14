@@ -1,0 +1,154 @@
+<section>
+    <h2 class="header">Case studies with GW</h2>    
+</section>
+
+<section>
+    <h4 class="header"> Inferring source properties </h4>
+        <div class="row">
+            <div class="fragment" style="padding-right: 20px">
+                <p style="padding:0%; margin:0%;"> Data </p>
+                <img data-src="../scma8/images/TimeSeries.png" height="360px">
+            </div>
+            <div class="fragment" style="padding-right: 20px">
+                <p style="padding:0%; margin:0%;"> Source properties </p>
+                <img data-src="../scma8/images/m1m2PE.png" height="360px">
+            </div>
+        </div>
+</section>
+
+<section>
+    <h4 class="header"> A million dollars problem</h4>
+    <div class="row">
+        <blockquote class="fragment twitter-tweet"><p lang="en" dir="ltr">Just6⃣4⃣days until observing run O4 from <a href="https://twitter.com/LIGO?ref_src=twsrc%5Etfw">@LIGO</a> <a href="https://twitter.com/ego_virgo?ref_src=twsrc%5Etfw">@ego_virgo</a> <a href="https://twitter.com/KAGRA_PR?ref_src=twsrc%5Etfw">@KAGRA_PR</a> starts! This is poised to triple our number of detected collisions between two black holes (BH-BH), two neutron stars (NS-NS) and BH-NS 😍 <br><br>-&gt; Read more in issue #22 of <a href="https://t.co/o030BmA25Z">https://t.co/o030BmA25Z</a> <a href="https://t.co/8ibj3ixKnL">pic.twitter.com/8ibj3ixKnL</a></p>&mdash; Floor Broekgaarden 💫 (@FloorAstro) <a href="https://twitter.com/FloorAstro/status/1638292463705264128?ref_src=twsrc%5Etfw">March 21, 2023</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+        <div class="fragment column">
+            <img data-src="../scma8/images/GoogleCPUh.png" width="480" height="240">
+            <p style="color: rgb(224, 71, 71); font-size:24pt"> ~1 million CPU hours per event</p>
+            <p style="color: rgb(224, 71, 71); font-size:24pt"> The last catalog costs ~1 million dollars</p>
+        </div>
+    
+    </div>
+</section>
+
+
+<section>
+    <h4 class="header"> Why is GW hard?</h4>
+    <div class="row">
+        <div class="column fragment">
+            <p style="padding:0%; margin:0%;">Multimodality</p>
+            <img data-src="https://gracedb.ligo.org/api/superevents/S230601bf/files/bayestar.png,1" height="360">
+            <p class="citation"> https://gracedb.ligo.org/superevents/S230601bf/view/</p>
+        </div>
+        <div class="column fragment ">
+            <p style="padding:0%; margin:0%;"> Small posterior (sometime)</p>
+            <img data-src="https://inspirehep.net/files/a2f58413c30620f4131cbd059e02f1f2" height="360">
+            <p class="citation"> Phys.Rev.X 9 (2019) 1, 011001</p>
+        </div>
+    </div>
+</section>
+
+<section>
+    <h4 class="header"> Quick recap of MCMC</h4>
+    <iframe src="https://chi-feng.github.io/mcmc-demo/app.html" style="background: #FFFFFF;" title="MCMC-demo" width=1080 height=560></iframe>
+    <p class="citation">Credit: MCMC gallery</p>
+</section>
+
+
+<section>
+    <h4 class="header">Jax - python on steroid</h4>
+    <div class="column">
+        <div class="row" style="justify-content: space-evenly;">
+            <img class="row" data-src="../scma8/images/Jax.png">
+            <ol class="bright">
+                <li>Autodiff</li>
+                <li>JIT compilation</li>
+                <li>Simple vectorization</li>
+                <li>GPU with XLA</li>
+            </ol>
+        </div>
+        <div class="row" style="justify-content: space-evenly;">
+            <img class="row" data-src="../scma8/images/jax_grad.png" width="360px;" style="padding-right: 20px;">
+            <img class="row" data-src="../scma8/images/jax_compile.png"  width="360px;">
+        </div>
+    </div>
+</section>
+
+<section>
+    <div class="row">
+        <h4 class="header"> Ripple - GW model in Jax</h4>
+        <img data-src="../scma8/images/ripple_github_tag.png" style="margin-top: 0; margin-left: 20px;">
+    </div>
+    <div class="column">
+        <img data-src="../scma8/images/Ripple_benchmark.png" height="360px;">
+        <div class="row fragment">
+
+            <span style="color: rgb(100,255,100); margin: 0;">\[\sim 10^6  \]</span>
+            <span style="color: rgb(100,255,100);">likelihood in a second, that's a whole run!</span> 
+        </div>
+    </div>
+</section>
+
+<section>
+    <div class="row">
+        <h4>flowMC - Normalizing flow enhanced MCMC</h4> 
+    </div>
+    <div class="row">
+        <div class="Column">
+                <img data-src="../scma8/images/flowMC.png" width="400px">
+            <ol>
+                <li class="fragment">Black box interface</li>
+                <li class="fragment">GPU+XLA support</li>
+                <li class="fragment">Gradient-base sampler</li>
+                <li class="fragment">Powerful flow model</li>
+            </ol>
+            <p class="fragment" style="color: rgb(100,255,100); font-size:medium"> Worked for exoplanet, protein structures, and more!</p>
+            <img class="fragment" src="../scma8/images/flowMC_github_tag.png" width="260px">
+
+        </div>
+
+        <div class="column fragment">
+            <iframe src="https://flowmc.readthedocs.io/en/main/quickstart/" style="background: #FFFFFF; margin-top: 20px;" title="flowMC-doc" width=1080 height=560></iframe>
+        </div>
+    </div>
+</section>
+
+<section>
+    <h4 class="header">How does it work? Building normalizng flow</h4>
+    <video controls autoplay>
+        <source src="./videos/BuildingFlow.mp4" type="video/mp4">
+    </video>
+</section>
+
+<section>
+    <h4 class="header">How does it work? Proposal with normalizing flow</h4>
+    <video controls autoplay>
+        <source src="./videos/FlowMC.mp4" type="video/mp4">
+    </video>
+</section>
+
+
+
+<section>
+    <div class="row">
+        <h4 class="header"> Putting the tools together - Jim</h4>
+        <img data-src="../scma8/images/jim_github_tag.png" style="margin-top: 0; margin-left: 20px;">
+    </div>
+    <div class="column">
+        <div class="row">
+            <div class="fragment">
+                <p> Real data </p>
+                <img class="row" data-src="../scma8/images/jim_posterior.png" height="400px;">
+            </div>
+            <div class="fragment">
+                <p> Simulated population</p>
+                <img class="row" data-src="../scma8/images/jim_pp_plot.png" height="400px;">
+            </div>
+        </div>
+        <p style="color: rgb(100,255,100); font-size: x-large; margin-left:-80px" class="fragment"> 2 minutes on GPU per event</p>
+    </div>
+</section>
+
+<style>
+    .katex-display{
+        margin: 0px;
+    }
+</style>
