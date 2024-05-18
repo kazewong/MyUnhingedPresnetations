@@ -1,0 +1,90 @@
+<section>
+    <h2> Why simulation-based inference? </h2>
+    <h4> Kaze Wong </h4>
+    <div style="position: fixed; bottom: 0; right: -600;">
+        <img data-src="../../asset/images/CCA_logo_color.png" width="20%"/>
+    </div>
+        <!-- <img style="position: fixed; bottom: 0; right: 800;" data-src="./images/qrcode_amaldi1.png" width="30%"/> -->
+</section>
+
+<section data-auto-animate>
+    <h4 class="header">Inference</h4>
+
+    <div class="r-stack">
+        <div class="fragment fade-in-then-out" data-fragment-index="1">
+            \[\begin{aligned}
+            p(\theta | d) &amp; = \frac{p(d | \theta) \pi(\theta) }{ p(d) }
+            \end{aligned} \]
+        </div>
+        <div class="fragment fade-in-then-out" data-fragment-index="2">
+            \[\begin{aligned}
+            p(\theta | d) &amp; = \frac{\blue{p(d | \theta)} \pi(\theta) }{ p(d) }
+            \end{aligned} \]
+            <span style="position: fixed; bottom:400; right: 375; color: rgb(100, 149, 237);">Likelihood</span>
+        </div>
+        <div class="fragment fade-in-then-out" data-fragment-index="3">
+            \[\begin{aligned}
+            p(\theta | d) &amp; = \frac{\blue{p(d | \theta)} \purple{\pi(\theta)} }{ p(d) }
+            \end{aligned} \]
+            <span style="position: fixed; bottom:400; right: 375; color: rgb(100, 149, 237);">Likelihood</span>
+            <span style="position: fixed; bottom:400; right: 290; color: rgb(157, 56, 189);">Prior</span>
+        </div>
+        <div class="fragment fade-in-then-out" data-fragment-index="4">
+            \[\begin{aligned}
+            p(\theta | d) &amp; = \frac{\blue{p(d | \theta)} \purple{\pi(\theta)} }{ \green{p(d)} }
+            \end{aligned} \]
+            <span style="position: fixed; bottom:400; right: 375; color: rgb(100, 149, 237);">Likelihood</span>
+            <span style="position: fixed; bottom:400; right: 290; color: rgb(157, 56, 189);">Prior</span>
+            <span style="position: fixed; bottom:200; right: 330; color: rgb(40, 174, 123);">Evidence</span>
+        </div>
+        <div class="fragment fade-in-then-out" data-fragment-index="5">
+            \[\begin{aligned}
+            p(\theta | \orange{d}) &amp; = \frac{\blue{p(d | \theta)} \purple{\pi(\theta)} }{ \green{p(d)} }
+            \end{aligned} \]
+            <span style="position: fixed; bottom:400; right: 375; color: rgb(100, 149, 237);">Likelihood</span>
+            <span style="position: fixed; bottom:400; right: 290; color: rgb(157, 56, 189);">Prior</span>
+            <span style="position: fixed; bottom:200; right: 330; color: rgb(40, 174, 123);">Evidence</span>
+            <span style="position: fixed; bottom:230; right: 500; color: rgb(255, 165, 0);">Data in</span>
+        </div>
+        <div class="fragment fade-in-then-out" data-fragment-index="6">
+            \[\begin{aligned}
+            \red{ p( \theta} \red{|} \orange{d} \red{)} &amp; = \frac{\blue{p(d | \theta)} \purple{\pi(\theta)} }{ \green{p(d)} }
+            \end{aligned} \]
+            <span style="position: fixed; bottom:400; right: 375; color: rgb(100, 149, 237);">Likelihood</span>
+            <span style="position: fixed; bottom:400; right: 290; color: rgb(157, 56, 189);">Prior</span>
+            <span style="position: fixed; bottom:200; right: 330; color: rgb(40, 174, 123);">Evidence</span>
+            <span style="position: fixed; bottom:230; right: 500; color: rgb(255, 165, 0);">Data in</span>
+            <span style="position: fixed; bottom:230; right: 620; color: rgb(223, 0, 48);">Paper out</span>
+        </div>
+    </div>
+</section>
+
+<section>
+    <h4 class="header"> Quick recap of MCMC</h4>
+    <iframe src="https://chi-feng.github.io/mcmc-demo/app.html" style="background: #FFFFFF;" title="MCMC-demo" width=1080 height=560></iframe>
+    <p class="citation">Credit: MCMC gallery</p>
+</section>
+
+<section>
+    <h4 class="header">Pros and cons of MCMC</h4>
+    <div class="column" style=" width: 800px;">
+        <div class="row" style="justify-content: space-between;">
+            <div class="column" style="color: skyblue;">
+                <h4 style="color: skyblue;">Pros</h4>
+                <ol>
+                    <li class="fragment" data-fragment-index="0"> Ergodic in thoery</li>
+                    <li class="fragment" data-fragment-index="1"> General purpose </li>
+                    <li class="fragment" data-fragment-index="2"> Flexible </li>
+                </ol>
+            </div>
+            <div class="column" style="color: tomato;">
+                <h4 style="color: tomato;">Cons</h4>
+                <ol>
+                    <li class="fragment" data-fragment-index="3"> Slow </li>
+                    <li class="fragment" data-fragment-index="4"> Need tuning </li>
+                    <li class="fragment" data-fragment-index="5"> Can be bias in practice </li>
+                </ol>
+            </div>
+        </div>
+    </div>
+</section>
