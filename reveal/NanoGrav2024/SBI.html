@@ -11,6 +11,36 @@
     </div>
 </section>
 
+<section>
+    <h4 class="header">Two steps in evalutating the likelihood</h4>
+    <div class="r-stack">
+        <div class="fragment fade-in-then-out" data-fragment-index="1">
+            \[\begin{aligned}
+            L(d|\theta) \sim e^{-(d-h(\theta))\Sigma^{-1}(d-h(\theta))^T/2}
+            \end{aligned} \]
+        </div>
+        <div class="fragment fade-in-then-out" data-fragment-index="2">
+            \[\begin{aligned}
+            L(d|\theta) \sim e^{-(d-\blue{h(\theta)})\Sigma^{-1}(d-\blue{h(\theta)})^T/2}
+            \end{aligned} \]
+        </div>
+        <div class="fragment fade-in-then-out" data-fragment-index="3">
+            \[\begin{aligned}
+            \red{L(d|\theta)} \sim e^{-(d-\blue{h(\theta)})\red{\Sigma^{-1} }(d-\blue{h(\theta)})^T/2}
+            \end{aligned} \]
+        </div>
+    </div>
+    <span class="fragment" data-fragment-index="2" style="color: rgb(100, 149, 237);">Fast simulation</span>
+    <span class="fragment" data-fragment-index="3" style="color: rgb(223, 0, 48);">Slow likelihood</span>
+</section>
+
+<section>
+    <h4 class="header">Normalizing flow</h4>
+    <div class="row">
+
+    </div>
+</section>
+
 <!-- Single event inference -->
 
 <section>
