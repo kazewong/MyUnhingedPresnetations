@@ -1,58 +1,5 @@
 <section>
-    <h2 class="header">Simulation-based inference</h2>
-</section>
-
-<section>
-    <h4 class="header">Simulate, train, compare</h4>
-    <div class="column">
-        <img class="fragment" data-src="https://dark.nbi.ku.dk/news/dark-news-21/simulation-based-inference-of-dynamical-galaxy-cluster-masses-with-3d-convolutional-neural-networks/Doogesh.png" width="100%">
-        <img class="fragment" data-src="https://ep-news.web.cern.ch/sites/default/files/inline-images/EP-March-2021/ML-EP-news3.png" width="100%">
-
-    </div>
-</section>
-
-<section>
-    <h4 class="header">Two steps in evalutating the likelihood</h4>
-    <div class="r-stack">
-        <div class="fragment fade-in-then-out" data-fragment-index="1">
-            \[\begin{aligned}
-            L(d|\theta) \sim e^{-(d-h(\theta))\Sigma^{-1}(d-h(\theta))^T/2}
-            \end{aligned} \]
-        </div>
-        <div class="fragment fade-in-then-out" data-fragment-index="2">
-            \[\begin{aligned}
-            L(d|\theta) \sim e^{-(d-\blue{h(\theta)})\Sigma^{-1}(d-\blue{h(\theta)})^T/2}
-            \end{aligned} \]
-        </div>
-        <div class="fragment fade-in-then-out" data-fragment-index="3">
-            \[\begin{aligned}
-            \red{L(d|\theta)} \sim e^{-(d-\blue{h(\theta)})\red{\Sigma^{-1} }(d-\blue{h(\theta)})^T/2}
-            \end{aligned} \]
-        </div>
-    </div>
-    <span class="fragment" data-fragment-index="2" style="color: rgb(100, 149, 237);">Fast simulation</span>
-    <span class="fragment" data-fragment-index="3" style="color: rgb(223, 0, 48);">Slow likelihood</span>
-</section>
-
-<section>
-    <h4 class="header">What do we train?</h4>
-    <div class="row" data-markdown>
-    target `$p(\theta|d)$`
-    </div>
-    <div class="row">
-        <ol>
-            <li class="fragment">Draw samples of $\theta$</li>
-            <li class="fragment">Simulate $d$ for each $\theta$</li>
-            <li class="fragment">Build a neural network to estimate $p(\theta|d)$</li>
-        </ol>
-    </div>
-</section>
-
-<section>
-    <h4 class="header">Normalizing flow</h4>
-    <div class="row">
-
-    </div>
+    <h2 class="header">A tale of two types of SBI</h2>
 </section>
 
 <!-- Single event inference -->
