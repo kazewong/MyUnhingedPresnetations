@@ -6,41 +6,25 @@
 <!-- Differentiable models -->
 
 <section>
-    <h4 class="header"></h4>
-</section>
-
-<section>
-    <h4 class="header">Infrastructure around AI is just as cool</h4>
-    <div class="column">
-        <div class="row" style="justify-content: space-evenly;">
-            <img class="row fragment" data-src="../scma8/images/Jax.png">
-            <ol class="bright fragment">
-                <li>Autodiff</li>
-                <li>JIT compilation</li>
-                <li>Simple vectorization</li>
-                <li>GPU with XLA</li>
-            </ol>
-        </div>
-        <div class="row fragment" style="justify-content: space-evenly;">
-            <img class="row" data-src="../scma8/images/jax_grad.png" width="360px;" style="padding-right: 20px;">
-            <img class="row" data-src="../scma8/images/jax_compile.png"  width="360px;">
-        </div>
-    </div>
-</section>
-
-<section>
+    <h4 class="header"> Reminder of why GW inference is hard</h4>
     <div class="row">
-        <h4 class="header"> Ripple - GW model in Jax</h4>
-        <img data-src="../scma8/images/ripple_github_tag.png" style="margin-top: 0; margin-left: 20px;">
-    </div>
-    <div class="column">
-        <img data-src="../scma8/images/Ripple_benchmark.png" height="360px;">
-        <div class="row fragment">
-
-            <span style="color: rgb(100,255,100); margin: 0;">\[\sim 10^6  \]</span>
-            <span style="color: rgb(100,255,100);">likelihood in a second, that's a whole run!</span> 
+        <div class="column">
+            <p style="padding:0%; margin:0%;">Multimodality</p>
+            <img data-src="https://gracedb.ligo.org/api/superevents/S230601bf/files/bayestar.png,1" height="360">
+            <p class="citation"> https://gracedb.ligo.org/superevents/S230601bf/view/</p>
+        </div>
+        <div class="column">
+            <p style="padding:0%; margin:0%;"> Small posterior (sometime)</p>
+            <img data-src="https://inspirehep.net/files/a2f58413c30620f4131cbd059e02f1f2" height="360">
+            <p class="citation"> Phys.Rev.X 9 (2019) 1, 011001</p>
         </div>
     </div>
+</section>
+
+<section>
+    <h4 class="header"> Quick recap of MCMC</h4>
+    <iframe src="https://chi-feng.github.io/mcmc-demo/app.html" style="background: #FFFFFF;" title="MCMC-demo" width=1080 height=560></iframe>
+    <p class="citation">Credit: MCMC gallery</p>
 </section>
 
 <!-- flowMC -->
@@ -92,6 +76,41 @@
 
 <!-- Jim -->
 
+
+<section>
+    <h4 class="header">Infrastructure around AI is just as cool</h4>
+    <div class="column">
+        <div class="row" style="justify-content: space-evenly;">
+            <img class="row fragment" data-src="../scma8/images/Jax.png">
+            <ol class="bright fragment">
+                <li>Autodiff</li>
+                <li>JIT compilation</li>
+                <li>Simple vectorization</li>
+                <li>GPU with XLA</li>
+            </ol>
+        </div>
+        <div class="row fragment" style="justify-content: space-evenly;">
+            <img class="row" data-src="../scma8/images/jax_grad.png" width="360px;" style="padding-right: 20px;">
+            <img class="row" data-src="../scma8/images/jax_compile.png"  width="360px;">
+        </div>
+    </div>
+</section>
+
+<section>
+    <div class="row">
+        <h4 class="header"> Ripple - GW model in Jax</h4>
+        <img data-src="../scma8/images/ripple_github_tag.png" style="margin-top: 0; margin-left: 20px;">
+    </div>
+    <div class="column">
+        <img data-src="../scma8/images/Ripple_benchmark.png" height="360px;">
+        <div class="row fragment">
+
+            <span style="color: rgb(100,255,100); margin: 0;">\[\sim 10^6  \]</span>
+            <span style="color: rgb(100,255,100);">likelihood in a second, that's a whole run!</span> 
+        </div>
+    </div>
+</section>
+
 <section>
     <div class="row">
         <h4 class="header"> Putting the tools together - Jim</h4>
@@ -109,20 +128,6 @@
             </div>
         </div>
         <p style="color: rgb(100,255,100); font-size: x-large; margin-left:-80px" class="fragment"> 2 minutes on GPU per event</p>
-    </div>
-</section>
-
-<section>
-    <h4 class="header">Preliminary development - going beyond Gaussian</h4>
-    <div class="row" style="justify-content: space-evenly;">
-        <div class="column fragment">
-            <p>Lensing with cosmic ray</p>
-            <img data-src="https://s3.amazonaws.com/aasie/images/2041-8205/949/2/null/apjlacd645f2_hr.jpg" height="400px;">
-        </div>
-        <div class="column fragment">
-            <p>GW with glitch (not yet)</p>
-            <img data-src="../amaldi2023/images/slic_corner.png" height="400px;">
-        </div>
     </div>
 </section>
 
