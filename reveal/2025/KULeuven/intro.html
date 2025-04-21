@@ -1,0 +1,82 @@
+<section>
+    <h2> Success and failure of ML in gravitational wave</h2>
+    <h4> Kaze Wong </h4>
+    <div style="position: fixed; bottom: -50; right: -600;">
+        <img data-src="../../../asset/images/JHU_logo_white.png" width="30%"/>
+    </div>
+
+</section>
+
+<section data-auto-animate>
+    <h4 class="header">Inference</h4>
+
+    <div class="r-stack">
+        <div class="fragment fade-in-then-out" data-fragment-index="1">
+            \[\begin{aligned}
+            p(\theta | d) &amp; = \frac{p(d | \theta) \pi(\theta) }{ p(d) }
+            \end{aligned} \]
+        </div>
+        <div class="fragment fade-in-then-out" data-fragment-index="2">
+            \[\begin{aligned}
+            p(\theta | d) &amp; = \frac{\blue{p(d | \theta)} \pi(\theta) }{ p(d) }
+            \end{aligned} \]
+            <span style="position: fixed; bottom:400; right: 375; color: rgb(100, 149, 237);">Likelihood</span>
+        </div>
+        <div class="fragment fade-in-then-out" data-fragment-index="3">
+            \[\begin{aligned}
+            p(\theta | d) &amp; = \frac{\blue{p(d | \theta)} \purple{\pi(\theta)} }{ p(d) }
+            \end{aligned} \]
+            <span style="position: fixed; bottom:400; right: 375; color: rgb(100, 149, 237);">Likelihood</span>
+            <span style="position: fixed; bottom:400; right: 290; color: rgb(157, 56, 189);">Prior</span>
+        </div>
+        <div class="fragment fade-in-then-out" data-fragment-index="4">
+            \[\begin{aligned}
+            p(\theta | d) &amp; = \frac{\blue{p(d | \theta)} \purple{\pi(\theta)} }{ \green{p(d)} }
+            \end{aligned} \]
+            <span style="position: fixed; bottom:400; right: 375; color: rgb(100, 149, 237);">Likelihood</span>
+            <span style="position: fixed; bottom:400; right: 290; color: rgb(157, 56, 189);">Prior</span>
+            <span style="position: fixed; bottom:200; right: 330; color: rgb(40, 174, 123);">Evidence</span>
+        </div>
+        <div class="fragment fade-in-then-out" data-fragment-index="5">
+            \[\begin{aligned}
+            p(\theta | \orange{d}) &amp; = \frac{\blue{p(d | \theta)} \purple{\pi(\theta)} }{ \green{p(d)} }
+            \end{aligned} \]
+            <span style="position: fixed; bottom:400; right: 375; color: rgb(100, 149, 237);">Likelihood</span>
+            <span style="position: fixed; bottom:400; right: 290; color: rgb(157, 56, 189);">Prior</span>
+            <span style="position: fixed; bottom:200; right: 330; color: rgb(40, 174, 123);">Evidence</span>
+            <span style="position: fixed; bottom:230; right: 500; color: rgb(255, 165, 0);">Data in</span>
+        </div>
+        <div class="fragment fade-in-then-out" data-fragment-index="6">
+            \[\begin{aligned}
+            \red{ p( \theta} \red{|} \orange{d} \red{)} &amp; = \frac{\blue{p(d | \theta)} \purple{\pi(\theta)} }{ \green{p(d)} }
+            \end{aligned} \]
+            <span style="position: fixed; bottom:400; right: 375; color: rgb(100, 149, 237);">Likelihood</span>
+            <span style="position: fixed; bottom:400; right: 290; color: rgb(157, 56, 189);">Prior</span>
+            <span style="position: fixed; bottom:200; right: 330; color: rgb(40, 174, 123);">Evidence</span>
+            <span style="position: fixed; bottom:230; right: 500; color: rgb(255, 165, 0);">Data in</span>
+            <span style="position: fixed; bottom:230; right: 620; color: rgb(223, 0, 48);">Paper out</span>
+        </div>
+        <div class="fragment fade-in">
+            <img data-src="../scma8/images/InferenceMeme.jpg" width="720px">
+        </div>
+    </div>
+
+</section>
+
+<section>
+    <h4 class="header">At scale</h4>
+    <ol start="0" style="position: fixed; right: 500;">
+        <li style="list-style-type: none;" data-fragment-index="0"> Requirement </li>
+        <li class="fragment" data-fragment-index="1"> Short run time </li>
+        <li class="fragment" data-fragment-index="2"> Low latency </li>
+        <li class="fragment" data-fragment-index="3"> High dimensional </li>
+        <li class="fragment" data-fragment-index="4"> Cheap </li>
+    </ol>
+    <ul style="position: fixed; right: 100; list-style-type: none;">
+        <li data-fragment-index="0"> Solution </li>
+        <li class="fragment" data-fragment-index="1"> Machine learning? </li>
+        <li class="fragment" data-fragment-index="2"> Machine learning? </li>
+        <li class="fragment" data-fragment-index="3"> Machine learning? </li>
+        <li class="fragment" data-fragment-index="4"> Machine learning? </li>
+    </ul>
+</section>
